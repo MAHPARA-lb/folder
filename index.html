@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalized Landing Page</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color:#BC8F8F;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensure footer sticks to bottom */
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        main {
+            padding: 2rem;
+            flex-grow: 1; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem; /* Space between buttons */
+        }
+
+        button {
+            padding: 0.75rem 1.5rem;
+            background-color:#8FBC8F;
+            color: #F5F5DC;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.10s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+        /*Responsive Design*/
+        @media (max-width: 600px) {
+            main{
+                padding: 1rem;
+            }
+            button{
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to My Landing Page</h1>
+    </header>
+
+    <main>
+        <button onclick="displayWelcome()">Welcome Message</button>
+        <button onclick="greetUser()">Personalized Greeting</button>
+        <button onclick="displayInfo()">My Information</button>
+    </main>
+
+    <footer>
+        &copy; 2023 My Landing Page. All rights reserved.
+    </footer>
+
+    <script>
+        function displayWelcome() {
+            alert("Welcome to My Landing Page!🙄");
+        }
+
+        function greetUser() {
+            var name = prompt("Please enter your name:");
+            if (name) { // Check if the user entered a name
+                alert("Hello,🙂 " + name + "!");
+            }
+        }
+
+        function displayInfo() {
+            alert("My name is Mahpara Abdul Qadir. I am so boring my favorite hobby is Nothing😁."); // Replace with your actual information
+        }
+    </script>
+
+</body>
+</html>
